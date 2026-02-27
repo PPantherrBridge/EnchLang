@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnchLang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="matrix-bg" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="nav-shell">
+        <a href="#home" class="brand">EnchLang</a>
+
+        <div class="nav-center">
+          <a href="#home">Home</a>
+          <a href="#syntax">Syntax</a>
+          <a href="#features">Features</a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="icon-link" href="https://github.com" aria-label="GitHub" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.77 5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0C6.27.63 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.54c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <button class="icon-link" id="themeToggle" aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3c0 0 0 0 0 0A7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="icon-link menu-toggle" id="menuToggle" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </nav>
+
+      <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <button class="icon-link close-menu" id="closeMenu" aria-label="Close menu">✕</button>
+        <a href="#home">Home</a>
+        <a href="#syntax">Syntax</a>
+        <a href="#features">Features</a>
+        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+      </aside>
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <p class="kicker">Scroll to explore</p>
+        <h1>EnchLang</h1>
+        <p>The programming language for <strong>pure mathematics.</strong></p>
+        <div class="hero-actions">
+          <a href="#syntax" class="btn btn-primary">View Syntax</a>
+          <a href="https://github.com" target="_blank" rel="noreferrer" class="btn btn-ghost">GitHub</a>
+        </div>
+      </section>
+
+      <section class="why reveal">
+        <h2>Why EnchLang?</h2>
+        <p>
+          Standard programming languages treat mathematics as a second-class citizen. EnchLang is built for
+          <span>pure mathematicians</span> and <span>theoretical researchers</span> who need a tool that speaks
+          their language—sets, domains, and relations—natively.
+        </p>
+      </section>
+
+      <section class="feature-strip reveal" id="features">
+        <article class="mini-card">
+          <h3>Math-Native</h3>
+          <p>No more `Math.pow(x, 2)`. Just write math. Domain violations are caught at runtime with meaningful mathematical errors.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Symbolic</h3>
+          <p>First-class support for symbolic definitions, sets, and matrices. Think in abstractions, not implementation details.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Academic</h3>
+          <p>Designed for clarity and proof verification, not for building web servers or system drivers.</p>
+        </article>
+      </section>
+
+      <section class="syntax reveal" id="syntax">
+        <h2>Native Syntax</h2>
+        <p>Write code as you write proofs. EnchLang supports domain constraints, set theory, and symbolic math out of the box.</p>
+
+        <div class="code-grid">
+          <article class="code-card">
+            <header>&gt;_ Numbers &amp; Domains</header>
+<pre>x = 5            → integer
+x : N = 5        → natural numbers
+x : Z = -3       → integers
+x : R = 2.7      → real numbers
+x : C = 3 + 2i   → complex numbers</pre>
+            <footer>Strict domain typing ensures mathematical correctness.</footer>
+          </article>
+          <article class="code-card">
+            <header>&gt;_ Sets</header>
+<pre>A = {1, 2, 3}
+B : Z = {-2, 0, 4}
+# Domain violations raise
+# math-aware errors</pre>
+            <footer>First-class support for Set theory operations.</footer>
+          </article>
+          <article class="code-card">
+            <header>&gt;_ Functions</header>
+<pre>f(x) = x + 1
+inv_f = inverse(f)
+h = fog(f, g)
+# Properties: one-one, onto</pre>
+            <footer>Define functions naturally as you would on paper.</footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="audience reveal">
+        <h2>The Audience</h2>
+        <div class="audience-grid">
+          <article class="aud-card positive">
+            <div class="badge">✓</div>
+            <h3>Who It's For</h3>
+            <ul>
+              <li>Math Students &amp; Researchers</li>
+              <li>Language Enthusiasts</li>
+              <li>Symbolic Computation Fans</li>
+            </ul>
+          </article>
+          <article class="aud-card negative">
+            <div class="badge">⚠</div>
+            <h3>Not For</h3>
+            <ul>
+              <li>Web Application Development</li>
+              <li>Systems Programming</li>
+              <li>High-performance workloads</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta reveal">
+        <h2>Join the Research</h2>
+        <p>EnchLang is open source. Contribute to the compiler, suggest new syntax, or build the standard library.</p>
+        <a href="https://github.com" target="_blank" rel="noreferrer" class="btn btn-primary">View on GitHub</a>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <h3>EnchLang</h3>
+        <p>A math-native programming language designed for pure mathematicians and theoretical researchers.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#">Documentation</a>
+        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#">Community</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
